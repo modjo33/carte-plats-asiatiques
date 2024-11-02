@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de Plats Asiatiques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            transition: transform 0.3s;
+            overflow: hidden;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .menu-item-content {
+            padding: 15px;
+        }
+        .menu-item h3 {
+            margin: 10px 0 5px;
+        }
+        .menu-item p {
+            color: #666;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Carte de Plats Asiatiques</h1>
+
+    <div class="form-container">
+        <form id="menuForm">
+            <input type="text" id="title" placeholder="Nom du plat" required>
+            <textarea id="description" placeholder="Description du plat" required></textarea>
+            <input type="text" id="imageUrl" placeholder="URL de l'image du plat" required>
+            <button type="submit">Ajouter le Plat</button>
+        </form>
+    </div>
+
+    <div class="menu-container" id="menuContainer">
+        <!-- Les plats seront ajoutés ici par JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
